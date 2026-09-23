@@ -1,7 +1,7 @@
 {
   "id": "folder-link-handler",
   "name": "Folder Link Handler",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "minAppVersion": "1.0.0",
   "description": "Handle markdown and wiki links to folders",
   "author": "temskiy",
