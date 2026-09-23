@@ -1,5 +1,4 @@
 const { Plugin, MarkdownView, PluginSettingTab, Setting, EditorSuggest, TFolder, FuzzySuggestModal, Platform } = require("obsidian");
-const nodePath = require("path");
 
 // Dynamically load Electron shell (desktop only)
 let shell = null;
@@ -11,7 +10,8 @@ if (Platform.isDesktop) {
     }
 }
 
-const PATH_SEP = nodePath.sep;
+// Cross-platform path separator without Node.js dependency
+const PATH_SEP = Platform.isDesktop ? (Platform.isWin ? "\\" : "/") : "/";
 
 const DEFAULT_SETTINGS = {
     language: "auto",
